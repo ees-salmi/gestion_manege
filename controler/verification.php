@@ -2,11 +2,15 @@
 session_start();
 if(isset($_POST['username']) && isset($_POST['password']))
 {
- // définition des variables pour la connexion à la base de données
- $db_username = 'root';
- $db_password = '';
- $db_name = 'bdd_manege';
- $db_host = 'localhost';
+ // connexion à la base de données
+ include '../myparam.inc.php';
+
+// Use the variables defined in config.php
+$db_host = MYHOST;
+$db_username = MYUSER;
+$db_password = MYPASS;
+$db_name = MYBASE;
+
  $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
  or die('could not connect to database');
  
@@ -17,19 +21,18 @@ if(isset($_POST['username']) && isset($_POST['password']))
  
  if($username !== "" && $password !== "")
     {
-        // selectionner le role depuis la base de donnée
+        // select the user's role from the database
         $requete = "SELECT type_personnel FROM personnel WHERE nom_personnel = '".$username."' AND mot_de_passe = '".$password."'";
         $exec_requete = mysqli_query($db, $requete);
         $reponse = mysqli_fetch_array($exec_requete);
         $role = $reponse['type_personnel'];
 
-        if($role != "") // si on trouver le role et l'utilisateur exixte dans la base de donnée
+        if($role != "") // user exists and role is not empty
         {
-            // on défini notre variable globale session pour l'access à different dashboard
             $_SESSION['username'] = $username;
             $_SESSION['user_type'] = $role;
 
-            // redirige chaque utilisateur à son dashboard
+            // redirect to appropriate page based on user role
             if($role == 'Directeur')
             {
                 header('Location: ../vue/dashboard_directeur.php');
@@ -51,7 +54,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
                 header('Location: ../vue/dashboard_technicien.php');
             }
         }
-        else // à la fin si le mot de passe ou bien l'utilisateur incorrect en redirige la personne vers le login
+        else // username or password is incorrect
         {
             header('Location: ../vue/login.php?erreur=1'); // utilisateur ou mot de passe incorrect
         }

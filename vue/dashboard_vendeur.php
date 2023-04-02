@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Welcome_style.css">
+    <link rel="stylesheet" href="dashboard_style.css">
     <title>Dashboard - Vendeur</title>
 </head>
 
@@ -107,3 +107,11 @@
 </body>
 
 </html>
+
+echo "# parc" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Oussamaaitelhadj/parc.git
+git push -u origin main

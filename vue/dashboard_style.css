@@ -1,0 +1,301 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.menu {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  width: 95vw;
+  margin: 1rem auto;
+  height: 88vh;
+  padding: 20px;
+  background-color: #fcfcfc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 1rem;
+}
+
+a {
+  margin: 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.content {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 25%;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+#result-container {
+  margin: 20px;
+}
+
+#details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#result {
+  border-radius: 5px;
+  cursor: pointer;
+}
+#search_result {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+select,
+input[type="text"],
+input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+select {
+  width: 200px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  border: 1px solid #333;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #223eca;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+#warning {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1rem;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 5px;
+}
+.modal-content {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 700px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.modal-content label {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+  display: inline;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+#id_Atelier {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#id_famile {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#delete {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#delete:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+#update {
+  margin-left: 110px;
+  background-color: #011a7b;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#update:hover {
+  background-color: #ffffff;
+  color: #011a7b;
+  border: 1px solid #000000;
+}

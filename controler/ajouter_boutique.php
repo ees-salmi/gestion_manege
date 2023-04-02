@@ -8,18 +8,17 @@ $db = mysqli_connect($db_host, $db_username, $db_password, $db_name)
     or die('could not connect to database');
 
 // Récupérer les données du formulaire
-$name = $_POST["name"];
-$description = $_POST["description"];
-$taille_min_client = $_POST["Taille_min_Client"];
-$id_atelier = $_POST["id_Atelier"];
+$type = $_POST["type"];
+$responsable = $_POST["responsable"];
+$chiffre_affaire = $_POST["chiffre_affaire"];
+$nombre_client_quotid = $_POST["nombre_client_quotid"];
 $id_zone = $_POST["id_zone"];
-$id_famille = $_POST["id_famille"];
 
 // Insérer des données dans la base de données
-$sql = "INSERT INTO manege (id_manege, nom_manege, description, taille_min_client, id_atelier, id_zone, id_famille) 
-        VALUES (NULL, '$name', '$description', $taille_min_client, $id_atelier, $id_zone, '$id_famille')";
+$sql = "INSERT INTO boutique (id_boutique, chiffre_affaire, nb_clients_quotid, type_boutique, responsable_id, id_zone) 
+        VALUES (NULL, $chiffre_affaire, $nombre_client_quotid, '$type', '$responsable', $id_zone)";
 if ($db->query($sql) === TRUE) {
-    echo '<script>alert("La manège a été ajoutée avec succès");</script>';
+    echo '<script>alert("La boutique a été ajoutée avec succès");</script>';
 
     echo ' <script>
             window.history.go(-1);
@@ -27,6 +26,7 @@ if ($db->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $db->error;
 }
+
 // Fermer la connexion à la base de données
 $db->close();
 ?>

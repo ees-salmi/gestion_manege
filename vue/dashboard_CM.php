@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Welcome_style.css">
+    <link rel="stylesheet" href="dashboard_style.css">
     <title>Dashboard - CM</title>
 </head>
 
