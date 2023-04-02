@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+#search_result {
+  margin: 1rem;
+}
+.container {
+  width: 95vw;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 1rem;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 25%;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+#search_title {
+  border-bottom: 1px solid #000000;
+  margin: 1rem;
+  color: rgb(0, 0, 0);
+  font-family: "Times New Roman", Times, serif;
+  outline: none;
+  border-radius: 2px;
+}
+
+p {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+select,
+input[type="text"],
+input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+select {
+  width: 200px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  border: 1px solid #333;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #223eca;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+#warning {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1rem;
+}
